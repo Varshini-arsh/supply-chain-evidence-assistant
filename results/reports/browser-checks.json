@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checks": [
+    "desktop rendering",
+    "mobile layout without horizontal overflow",
+    "investigation and exact KPI display",
+    "metric source dialog",
+    "document source dialog",
+    "local review approval",
+    "JSON export",
+    "PDF upload and indexing",
+    "saved history replay",
+    "evaluation report display",
+    "live LLM-planned UI investigation"
+  ],
+  "browser": "Microsoft Edge / Playwright",
+  "page_errors": []
+}

@@ -1,0 +1,50 @@
+﻿[
+  {
+    "id": "SLA-ATLAS-V1",
+    "title": "Atlas delivery SLA - archived",
+    "carrier": "Atlas",
+    "start": "2025-01",
+    "end": "2026-01",
+    "text": "Atlas delivery performance target is 90% on-time shipments per calendar month. Delivered on or before the promised date means on-time. Review late delivery exceptions monthly."
+  },
+  {
+    "id": "SLA-ATLAS-V2",
+    "title": "Atlas delivery SLA - current",
+    "carrier": "Atlas",
+    "start": "2026-02",
+    "end": null,
+    "text": "Atlas delivery performance target is 95% on-time shipments per calendar month. Delivered on or before the promised date means on-time. A missed target triggers a carrier review. Monetary credits require contract-owner approval; no automatic credit amount is specified."
+  },
+  {
+    "id": "SLA-BEACON-V1",
+    "title": "Beacon delivery SLA",
+    "carrier": "Beacon",
+    "start": "2026-01",
+    "end": null,
+    "text": "Beacon on-time delivery performance target is 92% per calendar month. Record late shipment exceptions before requesting a carrier review."
+  },
+  {
+    "id": "SLA-CEDAR-V1",
+    "title": "Cedar delivery SLA",
+    "carrier": "Cedar",
+    "start": "2026-01",
+    "end": null,
+    "text": "Cedar on-time delivery performance target is 95% per calendar month. Record late delivery with a shipment ID and exception reason. Escalate a missed monthly target to the carrier manager."
+  },
+  {
+    "id": "SOP-ESC-01",
+    "title": "Late delivery escalation policy",
+    "carrier": "all",
+    "start": "2026-01",
+    "end": null,
+    "text": "For late delivery, confirm promised and delivered dates, collect affected shipment IDs, and notify the carrier manager. For vehicle breakdown exceptions, request a recovery plan. For weather exceptions, document the incident. Exception codes alone do not establish causality."
+  },
+  {
+    "id": "SOP-KPI-01",
+    "title": "Delivery performance calculation",
+    "carrier": "all",
+    "start": "2026-01",
+    "end": null,
+    "text": "On-time delivery rate is 100 multiplied by on-time shipments divided by total delivered shipments in the calendar month. Changes between percentages are reported in percentage points. No rate can be calculated without records."
+  }
+]

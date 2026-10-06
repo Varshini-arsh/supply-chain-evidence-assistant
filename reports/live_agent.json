@@ -1,0 +1,231 @@
+{
+  "run_id": "5ecf4024c7e348579145ff8978641d6a",
+  "question": "Atlas: why did delivery performance decline in 2026-02 and which SLA policies apply?",
+  "status": "ok",
+  "answer": "Atlas, 2026-02: 20 shipments; 7 late; on-time delivery 65.0%. [SQL:Atlas:2026-02]\n\nRecorded late-shipment exceptions: {\"vehicle_breakdown\": 4, \"weather\": 3}. Exception codes alone do not establish causality. [SQL:Atlas:2026-02]\n\nPrevious month 2026-01: 90.0%. Change: -25.00 percentage points. [SQL:Atlas:2026-02, SQL:Atlas:2026-01]\n\nAtlas delivery performance target is 95% on-time shipments per calendar month. [SLA-ATLAS-V2:p1:c1]\n\nDelivered on or before the promised date means on-time. [SLA-ATLAS-V2:p1:c1]\n\nA missed target triggers a carrier review. [SLA-ATLAS-V2:p1:c1]\n\nMonetary credits require contract-owner approval; no automatic credit amount is specified. [SLA-ATLAS-V2:p1:c1]",
+  "trace": [
+    {
+      "step": "validate",
+      "detail": "Carrier Atlas; target 2026-02; read-only tools."
+    },
+    {
+      "step": "plan",
+      "detail": "LLM selected allowlisted tools; completeness gates applied.",
+      "tools": [
+        "search_documents",
+        "shipment_metrics",
+        "compare_months"
+      ],
+      "attempt": 1
+    },
+    {
+      "step": "shipment_metrics",
+      "detail": "Fixed parameterized SQL; read-only shipment database.",
+      "month": "2026-02"
+    },
+    {
+      "step": "compare_months",
+      "detail": "Compared target with preceding month using two SQL tool results."
+    },
+    {
+      "step": "search_documents",
+      "detail": "hybrid: BM25 + dense embeddings + RRF + relevance reranking",
+      "count": 4
+    },
+    {
+      "step": "compose",
+      "detail": "LLM selected cited facts; all IDs checked against retrieved evidence.",
+      "attempt": 1
+    },
+    {
+      "step": "verify",
+      "detail": "Every rendered fact and citation came from tool results or retrieved source sentences."
+    }
+  ],
+  "metrics": [
+    {
+      "carrier": "Atlas",
+      "month": "2026-02",
+      "total": 20,
+      "late": 7,
+      "on_time_pct": 65.0,
+      "exceptions": {
+        "vehicle_breakdown": 4,
+        "weather": 3
+      },
+      "late_shipment_ids": [
+        "Atlas-2-0",
+        "Atlas-2-1",
+        "Atlas-2-2",
+        "Atlas-2-3",
+        "Atlas-2-4",
+        "Atlas-2-5",
+        "Atlas-2-6"
+      ]
+    },
+    {
+      "carrier": "Atlas",
+      "month": "2026-01",
+      "total": 20,
+      "late": 2,
+      "on_time_pct": 90.0,
+      "exceptions": {
+        "vehicle_breakdown": 1,
+        "weather": 1
+      },
+      "late_shipment_ids": [
+        "Atlas-1-0",
+        "Atlas-1-1"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "id": "SLA-ATLAS-V2:p1:c1",
+      "title": "Atlas delivery SLA - current",
+      "carrier": "Atlas",
+      "start": "2026-02",
+      "end": null,
+      "source_name": "SLA-ATLAS-V2.md",
+      "synthetic": true,
+      "quarantined": false,
+      "chunk_count": 1,
+      "document_id": "SLA-ATLAS-V2",
+      "page": 1,
+      "section": "Atlas delivery SLA - current",
+      "text": "Atlas delivery performance target is 95% on-time shipments per calendar month. Delivered on or before the promised date means on-time. A missed target triggers a carrier review. Monetary credits require contract-owner approval; no automatic credit amount is specified.",
+      "score": 0.9187,
+      "lexical_score": 4.80612,
+      "semantic_score": 0.68481,
+      "rerank_score": 0.79817
+    },
+    {
+      "id": "INC-ATLAS-FEB:p1:c1",
+      "title": "Atlas February disruption log",
+      "carrier": "Atlas",
+      "start": "2026-02",
+      "end": "2026-02",
+      "source_name": "INC-ATLAS-FEB.md",
+      "synthetic": true,
+      "quarantined": false,
+      "chunk_count": 1,
+      "document_id": "INC-ATLAS-FEB",
+      "page": 1,
+      "section": "Atlas February disruption log",
+      "text": "The February Atlas incident register records repeated vehicle breakdown and weather exceptions on late shipments. Investigators must link each incident to shipment IDs before drawing conclusions about the causes of the performance decline.",
+      "score": 0.80608,
+      "lexical_score": 3.21808,
+      "semantic_score": 0.45453,
+      "rerank_score": 0.50585
+    },
+    {
+      "id": "SOP-KPI-01:p1:c1",
+      "title": "Delivery performance calculation",
+      "carrier": "all",
+      "start": "2026-01",
+      "end": null,
+      "source_name": "SOP-KPI-01.md",
+      "synthetic": true,
+      "quarantined": false,
+      "chunk_count": 1,
+      "document_id": "SOP-KPI-01",
+      "page": 1,
+      "section": "Delivery performance calculation",
+      "text": "On-time delivery rate is 100 multiplied by on-time shipments divided by total delivered shipments in the calendar month. Changes between percentages are reported in percentage points. No rate can be calculated without records.",
+      "score": 0.76409,
+      "lexical_score": 2.16796,
+      "semantic_score": 0.38094,
+      "rerank_score": 0.41441
+    },
+    {
+      "id": "SOP-PUNCTUALITY:p1:c1",
+      "title": "Delivery punctuality reporting",
+      "carrier": "all",
+      "start": "2026-01",
+      "end": null,
+      "source_name": "SOP-PUNCTUALITY.md",
+      "synthetic": true,
+      "quarantined": false,
+      "chunk_count": 1,
+      "document_id": "SOP-PUNCTUALITY",
+      "page": 1,
+      "section": "Delivery punctuality reporting",
+      "text": "Punctuality measures whether shipments reached customers on or before the promised delivery date. A punctual arrival is an on-time delivery. Missed arrival promises count as late shipments.",
+      "score": 0.69146,
+      "lexical_score": 0.93227,
+      "semantic_score": 0.34229,
+      "rerank_score": 0.26132
+    }
+  ],
+  "facts": [
+    {
+      "id": "metric:current",
+      "text": "Atlas, 2026-02: 20 shipments; 7 late; on-time delivery 65.0%.",
+      "sources": [
+        "SQL:Atlas:2026-02"
+      ],
+      "kind": "metric"
+    },
+    {
+      "id": "metric:exceptions",
+      "text": "Recorded late-shipment exceptions: {\"vehicle_breakdown\": 4, \"weather\": 3}. Exception codes alone do not establish causality.",
+      "sources": [
+        "SQL:Atlas:2026-02"
+      ],
+      "kind": "metric"
+    },
+    {
+      "id": "metric:comparison",
+      "text": "Previous month 2026-01: 90.0%. Change: -25.00 percentage points.",
+      "sources": [
+        "SQL:Atlas:2026-02",
+        "SQL:Atlas:2026-01"
+      ],
+      "kind": "metric"
+    },
+    {
+      "id": "SLA-ATLAS-V2:p1:c1:f1",
+      "text": "Atlas delivery performance target is 95% on-time shipments per calendar month.",
+      "sources": [
+        "SLA-ATLAS-V2:p1:c1"
+      ],
+      "kind": "document"
+    },
+    {
+      "id": "SLA-ATLAS-V2:p1:c1:f2",
+      "text": "Delivered on or before the promised date means on-time.",
+      "sources": [
+        "SLA-ATLAS-V2:p1:c1"
+      ],
+      "kind": "document"
+    },
+    {
+      "id": "SLA-ATLAS-V2:p1:c1:f3",
+      "text": "A missed target triggers a carrier review.",
+      "sources": [
+        "SLA-ATLAS-V2:p1:c1"
+      ],
+      "kind": "document"
+    },
+    {
+      "id": "SLA-ATLAS-V2:p1:c1:f4",
+      "text": "Monetary credits require contract-owner approval; no automatic credit amount is specified.",
+      "sources": [
+        "SLA-ATLAS-V2:p1:c1"
+      ],
+      "kind": "document"
+    }
+  ],
+  "assumptions": [],
+  "mode": "LLM-planned agent + constrained RAG composition",
+  "verification": {
+    "passed": true,
+    "method": "Exact evidence facts; source and fact IDs checked."
+  },
+  "carrier": "Atlas",
+  "month": "2026-02",
+  "planner": "llm",
+  "retrieval_backend": "hybrid: BM25 + dense embeddings + RRF + relevance reranking",
+  "composer": "llm",
+  "elapsed_ms": 19750
+}

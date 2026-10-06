@@ -1,0 +1,13 @@
+﻿__pycache__/
+*.pyc
+.venv/
+.dev-deps/
+models/
+.env
+*.log
+data/*.sqlite3
+data/*.bak
+data/_test.txt
+reports/*.tmp
+dist/
+

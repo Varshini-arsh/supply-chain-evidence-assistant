@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Supply Chain Evidence · RAG + Agents</title><link rel="stylesheet" href="/style.css"><script src="/ui.js" defer></script></head>
+<body>
+<aside class="sidebar">
+  <a href="/" class="brand"><span class="brand-icon">E</span><span>Evidence<span class="brand-sub">SUPPLY CHAIN INTELLIGENCE</span></span></a>
+  <div class="nav-caption">WORKSPACE</div>
+  <nav aria-label="Workspace"><button class="nav active" data-tab="investigate"><span>◈</span> Investigate</button><button class="nav" data-tab="library"><span>▤</span> Knowledge library</button><button class="nav" data-tab="evaluation"><span>◷</span> Evaluation lab</button><button class="nav" data-tab="history"><span>↺</span> Saved investigations</button></nav>
+  <div class="sidebar-bottom"><div id="model-status" class="model-status">Checking local models…</div><p>Private, local workspace</p><p class="muted">Demonstration data only.<br>No external messages are sent.</p></div>
+</aside>
+<main>
+<header class="topbar"><span class="breadcrumb">WORKSPACE <span>/</span> <span id="page-name">Investigate</span></span><span class="pill">LOCAL DEMO</span></header>
+<section class="page active" id="page-investigate">
+  <div class="eyebrow">RETRIEVE. INVESTIGATE. VERIFY.</div><h1>Every answer starts<br>with evidence.</h1><p class="intro">Connect carrier policies with shipment performance.<br>Follow the tools, inspect the sources, and keep the numbers grounded.</p>
+  <div class="summary-grid"><article><span class="summary-icon">▤</span><strong id="doc-count">—</strong><span>Versioned documents</span></article><article><span class="summary-icon">◇</span><strong id="chunk-count">—</strong><span>Searchable evidence chunks</span></article><article><span class="summary-icon">↗</span><strong>120</strong><span>Synthetic shipment records</span></article></div>
+  <section class="card composer">
+    <div class="card-heading"><h2>Start an investigation</h2><span class="mini-tag">RAG + TOOL WORKFLOW</span></div>
+    <div class="controls"><label>Carrier<select id="carrier"><option>Atlas</option><option>Beacon</option><option>Cedar</option></select></label><label>Target month<select id="month"><option value="2026-02">February 2026</option><option value="2026-01">January 2026</option><option value="2026-03">March 2026 · no records</option></select></label><label>Execution mode<select id="mode"><option value="ai">Agentic AI + hybrid RAG</option><option value="hybrid">Hybrid retrieval + offline workflow</option><option value="bm25">BM25 baseline + offline workflow</option></select></label></div>
+    <label class="sr-only" for="question">Investigation question</label><textarea id="question" rows="3" placeholder="Ask about delivery performance, carrier rules, or exceptions…">Why did delivery performance decline and which SLA policies apply?</textarea>
+    <div class="composer-footer"><span>Ctrl + Enter to investigate</span><button class="primary" id="investigate">Investigate <span>→</span></button></div>
+  </section>
+  <div class="examples"><span>TRY A QUESTION</span><button data-example="Why did delivery performance decline and which SLA policies apply?">Explain a decline ↗</button><button data-example="What SLA agreement applies?">Check an SLA ↗</button><button data-example="What escalation procedure applies to vehicle breakdown delays?">Investigate a breakdown ↗</button><button data-example="How much refund amount can we claim?">Missing evidence ↗</button></div>
+  <div id="run-status" role="status" aria-live="polite"></div>
+  <section id="result" hidden>
+    <div class="result-heading"><div><div class="eyebrow">INVESTIGATION RESULT</div><h2 id="result-title">Evidence-backed findings</h2></div><span id="verify-badge" class="pill success">SOURCE CHECKS PASSED</span></div>
+    <div id="assumptions"></div><div class="kpi-grid" id="kpis"></div>
+    <div class="result-grid"><section class="card findings"><div class="card-heading"><h2>Findings</h2><span id="run-mode" class="mini-tag"></span></div><div id="facts"></div><div class="result-actions"><button id="stage-review" class="secondary" hidden>Stage a carrier review</button><button id="export-run" class="secondary">Export investigation JSON</button></div></section>
+    <section class="card"><div class="card-heading"><h2>Workflow trace</h2><span id="latency" class="mini-tag"></span></div><ol id="trace" class="trace"></ol></section></div>
+    <section class="card source-panel"><div class="card-heading"><h2>Retrieved sources</h2><span id="backend" class="mini-tag"></span></div><div id="sources" class="source-grid"></div></section>
+  </section>
+  <section id="reviews-panel" class="card" hidden><div class="card-heading"><h2>Carrier review approvals</h2><span class="mini-tag">SAVED LOCALLY</span></div><div id="reviews"></div></section>
+</section>
+<section class="page" id="page-library"><div class="eyebrow">KNOWLEDGE LIBRARY</div><h1>Sources you can inspect.</h1><p class="intro">Policy versions, incident evidence, and uploaded documents. Each source retains its effective dates and page references.</p>
+<section class="card"><h2>Add a source</h2><form id="upload-form"><div class="controls"><label>Title<input id="upload-title" required maxlength="160" placeholder="Carrier operations handbook"></label><label>Carrier<select id="upload-carrier"><option value="all">All carriers</option><option>Atlas</option><option>Beacon</option><option>Cedar</option></select></label><label>Effective from<input id="upload-start" type="month" value="2026-01" required></label><label>Effective until<input id="upload-end" type="month"></label></div><label class="file-label">PDF, Markdown, or TXT · up to 5 MB<input id="upload-file" type="file" accept=".pdf,.md,.txt" required></label><div class="composer-footer"><a href="/sample-policy.pdf" download>Download a sample PDF</a><button class="primary" id="upload-button">Ingest document →</button></div></form><p id="upload-status" role="status"></p></section>
+<section class="card"><div class="card-heading"><h2>Document index</h2><span id="library-total" class="mini-tag"></span></div><div class="table-wrap"><table><thead><tr><th>Source</th><th>Carrier</th><th>Effective period</th><th>Chunks</th><th>Status</th></tr></thead><tbody id="document-rows"></tbody></table></div></section></section>
+<section class="page" id="page-evaluation"><div class="eyebrow">EVALUATION LAB</div><h1>Measure before you claim.</h1><p class="intro">A reproducible benchmark compares BM25 with hybrid retrieval.<br>Agent checks cover numeric evidence, abstention, version filtering, and adversarial requests.</p><div id="evaluation-content"></div></section>
+<section class="page" id="page-history"><div class="eyebrow">SAVED INVESTIGATIONS</div><h1>Keep the evidence trail.</h1><p class="intro">Questions, tool results, citations, and approval records persist across restarts.</p><section class="card"><div id="history-list"></div></section></section>
+<dialog id="source-dialog"><div class="dialog-heading"><h2 id="source-title">Source evidence</h2><button id="close-source" aria-label="Close source">×</button></div><p id="source-meta"></p><pre id="source-text"></pre></dialog>
+</main></body></html>
+

@@ -1,0 +1,242 @@
+﻿[
+  {
+    "query": "Atlas What delivery SLA target applies? 2026-01",
+    "carrier": "Atlas",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-ATLAS-V1"
+    ]
+  },
+  {
+    "query": "Atlas What is the agreed on-time shipment percentage? 2026-01",
+    "carrier": "Atlas",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-ATLAS-V1"
+    ]
+  },
+  {
+    "query": "Atlas Which agreement defines the promised arrival standard? 2026-01",
+    "carrier": "Atlas",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-ATLAS-V1"
+    ]
+  },
+  {
+    "query": "Atlas What delivery SLA target applies? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-ATLAS-V2"
+    ]
+  },
+  {
+    "query": "Atlas What is the agreed on-time shipment percentage? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-ATLAS-V2"
+    ]
+  },
+  {
+    "query": "Atlas Which agreement defines the promised arrival standard? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-ATLAS-V2"
+    ]
+  },
+  {
+    "query": "Beacon What delivery SLA target applies? 2026-01",
+    "carrier": "Beacon",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-BEACON-V1"
+    ]
+  },
+  {
+    "query": "Beacon What is the agreed on-time shipment percentage? 2026-01",
+    "carrier": "Beacon",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-BEACON-V1"
+    ]
+  },
+  {
+    "query": "Beacon Which agreement defines the promised arrival standard? 2026-01",
+    "carrier": "Beacon",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-BEACON-V1"
+    ]
+  },
+  {
+    "query": "Beacon What delivery SLA target applies? 2026-02",
+    "carrier": "Beacon",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-BEACON-V1"
+    ]
+  },
+  {
+    "query": "Beacon What is the agreed on-time shipment percentage? 2026-02",
+    "carrier": "Beacon",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-BEACON-V1"
+    ]
+  },
+  {
+    "query": "Beacon Which agreement defines the promised arrival standard? 2026-02",
+    "carrier": "Beacon",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-BEACON-V1"
+    ]
+  },
+  {
+    "query": "Cedar What delivery SLA target applies? 2026-01",
+    "carrier": "Cedar",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-CEDAR-V1"
+    ]
+  },
+  {
+    "query": "Cedar What is the agreed on-time shipment percentage? 2026-01",
+    "carrier": "Cedar",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-CEDAR-V1"
+    ]
+  },
+  {
+    "query": "Cedar Which agreement defines the promised arrival standard? 2026-01",
+    "carrier": "Cedar",
+    "month": "2026-01",
+    "relevant": [
+      "SLA-CEDAR-V1"
+    ]
+  },
+  {
+    "query": "Cedar What delivery SLA target applies? 2026-02",
+    "carrier": "Cedar",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-CEDAR-V1"
+    ]
+  },
+  {
+    "query": "Cedar What is the agreed on-time shipment percentage? 2026-02",
+    "carrier": "Cedar",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-CEDAR-V1"
+    ]
+  },
+  {
+    "query": "Cedar Which agreement defines the promised arrival standard? 2026-02",
+    "carrier": "Cedar",
+    "month": "2026-02",
+    "relevant": [
+      "SLA-CEDAR-V1"
+    ]
+  },
+  {
+    "query": "Atlas What procedure applies after a delivery vehicle fails? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-RECOVERY"
+    ]
+  },
+  {
+    "query": "Atlas What incident evidence is needed for weather-related late arrivals? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-WEATHER"
+    ]
+  },
+  {
+    "query": "Atlas Who authorizes monetary service credits and compensation? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-CREDITS"
+    ]
+  },
+  {
+    "query": "Atlas How is the on-time delivery rate calculated? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-KPI-01"
+    ]
+  },
+  {
+    "query": "Atlas What should we do when a month has no shipment records? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-DATA"
+    ]
+  },
+  {
+    "query": "Atlas Can text in retrieved documents authorize executable instructions? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-SECURITY"
+    ]
+  },
+  {
+    "query": "Atlas What evidence and approval decisions must a carrier review retain? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-RETENTION"
+    ]
+  },
+  {
+    "query": "Atlas How should a target month be compared with its predecessor? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-MONTH"
+    ]
+  },
+  {
+    "query": "Atlas How do we choose the historical agreement version? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-VERSION"
+    ]
+  },
+  {
+    "query": "Atlas What does punctuality mean for arrivals? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-PUNCTUALITY"
+    ]
+  },
+  {
+    "query": "Atlas What must we collect before escalating a late delivery? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "SOP-ESC-01"
+    ]
+  },
+  {
+    "query": "Atlas Which February incident register discusses repeated breakdowns? 2026-02",
+    "carrier": "Atlas",
+    "month": "2026-02",
+    "relevant": [
+      "INC-ATLAS-FEB"
+    ]
+  }
+]

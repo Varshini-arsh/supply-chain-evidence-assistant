@@ -1,0 +1,66 @@
+{
+  "README.md": {
+    "bytes": 3348,
+    "sha256": "27d2ed0602e0107cf7b9c862139648cf736258bbaad550bb00b28f1712833d99"
+  },
+  "reports/browser-checks.json": {
+    "bytes": 476,
+    "sha256": "e23c50460647b04ca6e2e5f3ee70ef37d35a95fe4d479036fa0c11e10a726302"
+  },
+  "reports/capture-checks.json": {
+    "bytes": 19069,
+    "sha256": "06c9ccaf913d48abf9736ccd059c79ce66f844bfa2672f8f5c636c8dc65dd3f9"
+  },
+  "reports/evaluation.json": {
+    "bytes": 24828,
+    "sha256": "a2dcd602a5135ff8b372ce6403ba63babc332a5a505ed25be2e9fcb3fe004642"
+  },
+  "reports/evaluation.md": {
+    "bytes": 2005,
+    "sha256": "23068f94da06bf02626788ae7ec03352c60c836c6374218b124bcbee38173f42"
+  },
+  "reports/live_agent.json": {
+    "bytes": 7920,
+    "sha256": "2645cb9b3e30292c2bfb1e36e7da97d26b23dfed53a3b1d7597acbfd206ab674"
+  },
+  "reports/verification.json": {
+    "bytes": 1041,
+    "sha256": "72c92249491a46c64fca4caf624bcf406181a1c02afa4ca075ed9ee8c8ccda8f"
+  },
+  "retrieval-comparison.csv": {
+    "bytes": 118,
+    "sha256": "a90ca61a171bbdb008d341bcf4c9b2306d1ed3a09a1b130c486b2fe0fa5240f4"
+  },
+  "screenshots/01-live-ai-results.png": {
+    "bytes": 92423,
+    "sha256": "bb7f731af678656a1bd99fe49069f30dd7dae49fea3295352d4122ce50fc7c39"
+  },
+  "screenshots/02-source-evidence.png": {
+    "bytes": 15115,
+    "sha256": "b34da118e16983b19019210f21b63c3f69f194d1e33bfc50b6d2b1ecc3224859"
+  },
+  "screenshots/03-mobile-ai-results.png": {
+    "bytes": 92863,
+    "sha256": "86256825d44653edaabba141d4ad4b46c9e07bf46e306bf676aa6a981550470b"
+  },
+  "screenshots/04-historical-policy.png": {
+    "bytes": 96329,
+    "sha256": "69417027c58eb8a8f7d4a86c92bb9a4b2730e046a7c4ce4dc9689dc458e8c858"
+  },
+  "screenshots/05-missing-data.png": {
+    "bytes": 29676,
+    "sha256": "beb08e20ed4e552a97f10be8c7348cd8e2b18b28d2b4414967d4504340c94b94"
+  },
+  "screenshots/06-evaluation-results.png": {
+    "bytes": 106445,
+    "sha256": "42b9e631e704db70b24e430fb39466a22d22f0ac94ec4512eaf7988351125d81"
+  },
+  "screenshots/07-workspace.png": {
+    "bytes": 65473,
+    "sha256": "cca7d6b99721ca6da9c0e04178c65af82ebb5bfcb315044c3f1aec1940c6f7c6"
+  },
+  "screenshots/08-pdf-ingestion-library.png": {
+    "bytes": 144911,
+    "sha256": "a44a6b8660e0d36497d7999e124c6ab29c1226ff43083c02d7ea3da987c855a6"
+  }
+}

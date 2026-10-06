@@ -1,0 +1,38 @@
+{
+  "verified_at": "2026-10-06T07:21:33.781665+00:00",
+  "automated_tests": {
+    "command": "python -m unittest -v",
+    "tests_run": 36,
+    "passed": 36,
+    "failed": 0,
+    "runtime_seconds": 11.663
+  },
+  "workflow_evaluation": {
+    "passed": 29,
+    "total": 29
+  },
+  "retrieval": {
+    "labeled_questions": 30,
+    "bm25_recall_at_4": 0.7,
+    "hybrid_recall_at_4": 0.9
+  },
+  "browser": {
+    "passed": true,
+    "checks": [
+      "desktop rendering",
+      "mobile layout without horizontal overflow",
+      "investigation and exact KPI display",
+      "metric source dialog",
+      "document source dialog",
+      "local review approval",
+      "JSON export",
+      "PDF upload and indexing",
+      "saved history replay",
+      "evaluation report display",
+      "live LLM-planned UI investigation"
+    ],
+    "browser": "Microsoft Edge / Playwright",
+    "page_errors": []
+  },
+  "scope": "Completed local portfolio application using synthetic data and constrained evidence composition."
+}

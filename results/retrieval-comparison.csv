@@ -1,0 +1,3 @@
+retriever,recall_at_4,mrr_at_4,mean_latency_ms,labeled_questions
+bm25,0.7,0.5694,0.8,30
+hybrid,0.9,0.7083,43.41,30
